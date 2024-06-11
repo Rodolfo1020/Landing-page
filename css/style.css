@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;/*para que los margenes esten alinieados bien desde el comienzo*/
+    margin: 0;
+    text-decoration: none;/*para quitar la decoracion predeterminada para cada enlace u otras cosas*/
+
+}
+/*colores*/
+:root{
+    --color__primario: rgb(58, 171, 58);
+    --color__secundario: rgb(112, 21, 21);
+    --color__terciario: rgb(62, 62, 132);
+    /*colores basicos*/
+    --color__blanco: white;
+    --color__negro: black;
+}
+nav{
+    background-color: var(--color__primario);
+    height: 100px;
+    width: 100%;
+}
+label.logo{
+    color: var(--color__blanco);
+    font-size: 20px;
+    line-height: 100px;
+    padding: 0 15px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: var(--color__blanco);
+    font-size: 15px;
+}
+a:hover{/*esta es una pseudoclase*/
+    background-color: var(--color__terciario);
+    transition: .5s;
+}
