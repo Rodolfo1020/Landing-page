@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Caja de reseteo de estilo */ 
 *{
     padding: 0;/*para que los margenes esten alinieados bien desde el comienzo*/
     margin: 0;
     text-decoration: none;/*para quitar la decoracion predeterminada para cada enlace u otras cosas*/
-
+    list-style: none;
 }
 /*colores*/
 :root{
@@ -14,6 +16,11 @@
     /*colores basicos*/
     --color__blanco: white;
     --color__negro: black;
+}
+body{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 nav{
     background-color: var(--color__primario);
@@ -48,4 +55,81 @@ nav ul li a{
 a:hover{/*esta es una pseudoclase*/
     background-color: var(--color__terciario);
     transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--color__blanco);
+    float: right;
+    line-height: 100px;
+    margin-right: 50px;
+    cursor: pointer;/*Para cambiar el cursor a algo seleccionable*/
+    display: none;
+}
+/* . para clase y # para identificador*/
+#check{
+    display: none;
+}
+@media (max-width:952px){
+    label.logo{
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        width: 100vh;
+        height: 100vh;
+        background-color: var(--color__primario);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover{
+        background-color: var(--color__primario);
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/* Seccion de imagen y bienvenida */
+.hero{
+    background: /*linear-gradient(to bottom, #07f4427a, #04a51c7f),*/ url("../Imagenes/img-principal.png");/*El "../ sirve para buscar en todos los archivos del inicio*/
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    border-top: 5px inset #1C6EA4;
+    border-radius: 0px 0px 0px 0px;
+}
+h2{
+    color: var(--color__negro);
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+h3{
+    color: var(--color__negro);
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
